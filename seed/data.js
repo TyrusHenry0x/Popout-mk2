@@ -1,7 +1,7 @@
 import db from "../db/connection.js";
-import Task from "../models/task.js";
 import User from "../models/user.js";
 import bcrypt from "bcrypt";
+import Task from "../models/task.js";
 
 const insertData = async () => {
   await db.dropDatabase();
@@ -47,4 +47,8 @@ const insertData = async () => {
     ]
   })
   await user3.save()
+
+  db.close();
 }
+
+insertData()

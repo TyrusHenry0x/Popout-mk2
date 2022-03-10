@@ -1,6 +1,5 @@
 import { Router } from "express";
 import * as controllers from '../controllers/tasks'
-import restrict from '../helpers/restrict.js'
 
 const router = Router()
 
